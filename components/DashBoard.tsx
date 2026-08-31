@@ -1,10 +1,10 @@
 'use client'
 import { useTheme } from '@/context/ThemeContext';
 import { Activity, DollarSign, Users } from 'lucide-react';
-import Layout from '../components/Layout';
 import MetricCard from '../components/MetricCard';
 import OrdersTable from '../components/OrdersTable';
 import UserProfile from '../components/UserProfile';
+import Layout from './Layout';
 
 const DashBoard = () => {
     const {theme, toggleTheme} = useTheme();

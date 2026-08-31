@@ -1,13 +1,14 @@
 'use client'
 import { useTheme } from '@/context/ThemeContext';
 import { LayoutDashboard, Settings, ShoppingBag, Users, X } from 'lucide-react';
-import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 const navItems = [
-  { name: 'Dashboard', icon: LayoutDashboard, active: false },
-  { name: 'Customers', icon: Users, active: false },
-  { name: 'Orders', icon: ShoppingBag, active: false },
-  { name: 'Settings', icon: Settings, active: false },
+  { name: 'Dashboard', icon: LayoutDashboard, active: false, href:"/" },
+  { name: 'Customers', icon: Users, active: false, href:"/customers"},
+  { name: 'Orders', icon: ShoppingBag, active: false, href:"/orders" },
+  { name: 'Settings', icon: Settings, active: false, href:"/settings"},
 ];
 
 const colors = [
@@ -20,8 +21,10 @@ type SidebarProps = {
 };
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
-    const [currentActive, setActive] = useState(0);
+  //  const [currentActive, setActive] = useState(0);
     const {theme, toggleTheme} = useTheme();
+    const Router = useRouter();
+    const pathname = usePathname();
     return (
         <>
             {isOpen && (
@@ -46,21 +49,18 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                     {
                         navItems.map((item, idx)=>{
                             const Icon = item.icon;
+                            const isActive = pathname === item.href
                             return (
-                                <a 
-                                key={item.name}
-                                onClick={()=> {
-                                    setActive(idx)
-                                }}
-                                href="#"
-                                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium ${
-                                    idx === currentActive
+                                <Link key={idx} href = {item.href}><button 
+                                
+                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium ${
+                                    isActive
                                         ? (theme === 'dark' ? colors[0] : colors[2])
                                         : (theme === 'dark' ? colors[1] : colors[3])
                                 }`}>
                                     <Icon className={`w-5 h-5 ${item.active ? 'text-purple-600' : 'text-gray-500'}`} />
                                         {item.name}
-                                </a>
+                                </button></Link>
                             )
                         })
                     }
