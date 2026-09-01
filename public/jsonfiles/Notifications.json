@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "title": "Urgent Need",
+    "message": "Need a developer for project A",
+    "time": "16:15",
+    "read": false
+  },
+  {
+    "id": "2",
+    "title": "Newsletter",
+    "message": "About Nature",
+    "time": "13:19",
+    "read": true
+  },
+  {
+    "id": "3",
+    "title": "Project Status",
+    "message": "Require update regarding project",
+    "time": "11:54",
+    "read": false
+  }
+
+]

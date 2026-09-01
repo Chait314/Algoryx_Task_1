@@ -53,7 +53,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
                             return (
                                 <Link key={idx} href = {item.href}><button 
                                 
-                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium ${
+                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm hover:cursor-pointer font-medium ${
                                     isActive
                                         ? (theme === 'dark' ? colors[0] : colors[2])
                                         : (theme === 'dark' ? colors[1] : colors[3])

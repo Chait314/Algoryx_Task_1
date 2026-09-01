@@ -1,10 +1,10 @@
 [
-    {"clientid": "1", "client": "Anette"},
-    {"clientid": "5", "client": "John"},
-    {"clientid": "15", "client": "Emily"},
-    {"clientid": "3", "client": "Sarah"},
-    {"clientid": "7", "client": "David"},
-    {"clientid": "8", "client": "James"},
-    {"clientid": "90", "client": "Amanda"},
-    {"clientid": "39", "client": "Robert"}
+    {"clientid": "1", "client": "Anette", "ordersPlaced": 2},
+    {"clientid": "5", "client": "John", "ordersPlaced": 1},
+    {"clientid": "15", "client": "Emily", "ordersPlaced": 1},
+    {"clientid": "3", "client": "Sarah", "ordersPlaced": 1},
+    {"clientid": "7", "client": "David", "ordersPlaced": 2},
+    {"clientid": "8", "client": "James", "ordersPlaced": 1},
+    {"clientid": "90", "client": "Amanda", "ordersPlaced": 1},
+    {"clientid": "39", "client": "Robert", "ordersPlaced": 1}
 ]

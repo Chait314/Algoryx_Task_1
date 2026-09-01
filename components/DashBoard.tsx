@@ -19,9 +19,9 @@ const DashBoard = () => {
                     <p className={`text-sm mt-1 ${theme==='dark'?'text-gray-600':'text-gray-500'}`}>Overview of your real-time metrics and project deployment status.</p>
             </div>
             <div className = "grid grid-cols-1 md:grid-cols-3 gap-5">
-                <MetricCard title="Total Revenue" value="$48,290" change="+14.2%" isPositive={true} icon={DollarSign} />
-                <MetricCard title="Active Services" value="1,204" change="+8.1%" isPositive={true} icon={Activity} />
-                <MetricCard title="Active Users" value="8,940" change="-1.4%" isPositive={false} icon={Users} />
+                <MetricCard title="Total Revenue" value="$1,500" change="+14.2%" isPositive={true} icon={DollarSign} />
+                <MetricCard title="Active Services" value="34" change="+8.1%" isPositive={true} icon={Activity} />
+                <MetricCard title="Active Users" value="8" change="-8.4%" isPositive={false} icon={Users} />
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
                 <div className='lg:col-span-2'>

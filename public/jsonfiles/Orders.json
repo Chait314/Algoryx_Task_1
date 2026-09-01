@@ -1,13 +1,13 @@
 
 [
-  { "id": "1", "clientid": "1","client": "Annette", "amount": "$4000", "status": "Completed" },
-  { "id": "2", "clientid": "5","client": "John", "amount": "$2500", "status": "Failed" },
-  { "id": "3", "clientid": "15","client": "Emily", "amount": "$1500", "status": "Completed" },
-  { "id": "4", "clientid": "1","client": "Annette", "amount": "$3200", "status": "Failed" },
-  { "id": "5", "clientid": "3", "client": "Sarah", "amount": "$4500", "status": "Completed" },
-  { "id": "6",  "clientid": "7","client": "David", "amount": "$1800", "status": "Failed" },
-  { "id": "7",  "clientid": "7","client": "David", "amount": "$5000", "status": "Completed" },
-  { "id": "8",  "clientid": "8","client": "James", "amount": "$2200", "status": "Completed" },
-  { "id": "9",  "clientid": "90","client": "Amanda", "amount": "$3100", "status": "Failed" },
-  { "id": "10", "clientid": "39", "client": "Robert", "amount": "$2900", "status": "Completed" }
+  { "id": "1", "clientid": "1","client": "Annette", "amount": "$2", "status": "Completed" },
+  { "id": "2", "clientid": "5","client": "John", "amount": "$4", "status": "Failed" },
+  { "id": "3", "clientid": "15","client": "Emily", "amount": "$22", "status": "Completed" },
+  { "id": "4", "clientid": "1","client": "Annette", "amount": "$14", "status": "Failed" },
+  { "id": "5", "clientid": "3", "client": "Sarah", "amount": "$5", "status": "Completed" },
+  { "id": "6",  "clientid": "7","client": "David", "amount": "$2", "status": "Failed" },
+  { "id": "7",  "clientid": "7","client": "David", "amount": "$1", "status": "Completed" },
+  { "id": "8",  "clientid": "8","client": "James", "amount": "$10", "status": "Completed" },
+  { "id": "9",  "clientid": "90","client": "Amanda", "amount": "$2", "status": "Failed" },
+  { "id": "10", "clientid": "39", "client": "Robert", "amount": "$13", "status": "Completed" }
 ]
