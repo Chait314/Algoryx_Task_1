@@ -54,7 +54,7 @@ const HandleClick = () => {
             </thead>
             <tbody className={`divide-y ${theme==='dark' ? 'divide-gray-800':'divide-gray-100'}`}>
             {currOrd.map((order) => (
-                <tr key={order.id} className={`transition-colors ${theme==='dark'?'hover:bg-gray-800 text-gray-100':'hover:bg-gray-100 text-gray-900'}`}>
+                <tr key={order.id} className={`transition-all hover:overflow-x-hidden duration-300 hover:scale-[1.00] transition-colors ${theme==='dark'?'hover:bg-gray-800 text-gray-100':'hover:bg-gray-100 text-gray-900'}`}>
                 <td className={`px-6 py-4 font-bold ${theme==='dark'?'text-gray-50':'text-black'}`}>{order.id}</td>
                 <td className={`px-6 py-4 ${theme==='dark'?'text-gray-50':'text-black'}`}>{order.client}</td>
                 <td className={`px-6 py-4 font-semibold ${theme==='dark'?'text-gray-50':'text-black'}`}>{order.amount}</td>

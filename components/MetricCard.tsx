@@ -17,7 +17,7 @@ const MetricCard = ({title, value, change, isPositive, icon}: MetricsCard) => {
   const IconComponent = icon;
     const {theme, toggleTheme} = useTheme();
   return (
-    <div className={`border p-6 rounded-xl shadow-xs ${theme==='dark'? 'bg-gray-900 text-white border-gray-800' : 'bg-gray-100 text-black border-gray-100'}`}>
+    <div className={`border p-6 rounded-xl shadow-xs ${theme==='dark'? 'bg-gray-900 text-white border-gray-800' : 'bg-gray-100 text-black border-gray-100'} transition-all duration-200 hover:-translate-y-1 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/5`}>
       <div className="flex items-center justify-between">
         <span className={`text-sm font-semibold ${theme==='dark'? 'text-gray-100' : 'text-gray-900'}`}>{title}</span>
         {IconComponent && <IconComponent className={`w-5 h-5 ${theme==='dark'? 'text-purple-500':'text-purple-600'}`}/>}

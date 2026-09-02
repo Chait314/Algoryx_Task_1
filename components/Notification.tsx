@@ -1,5 +1,6 @@
 "use client"
 import { useTheme } from '@/context/ThemeContext';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Bell, Check, Trash2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -107,9 +108,23 @@ export default function Notification(){
                                 </div>
                             ):
                             (
-                                notifications.map((item)=> (
-                                    <div
+                                <AnimatePresence initial={false}>
+                               { notifications.map((item)=> (
+                                    <motion.div
                                         key={item.id}
+                                        initial = {{opacity:1, x:0, height:'auto'}}
+                                        exit = {{
+                                            x:'100%',
+                                            opacity:0,
+                                            height:0,
+                                            paddingTop:0,
+                                            paddingBottom:0,
+                                            transition:{
+                                                x: {type:'spring', stiffness:300, damping:30},
+                                                opacity: {duration:0.2},
+                                                height: { delay: 0.1, duration:0.2}
+                                            },
+                                        }}
                                         className={`p-4 flex items-start justify-between gap-3 transition-colors ${
                                         item.read ? 'opacity-60 bg-transparent' : ((theme==='dark') ? 'bg-purple-900/10': 'bg-purple-400/10')
                                         } ${(theme==='dark') ? 'hover:bg-gray-700/40':'hover:bg-gray-300/40' }`}
@@ -135,8 +150,9 @@ export default function Notification(){
                                         >
                                         <Trash2 className="w-3.5 h-3.5" />
                                         </button>
-                                    </div>
-                                ))
+                                    </motion.div>
+                                ))}
+                                </AnimatePresence>
                             )
                         }
                     </div>

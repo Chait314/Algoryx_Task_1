@@ -11,7 +11,7 @@ type NavbarProps = {
 type ProductType = {
     id:string;
     Name:string;
-    cost:string
+    Cost:string
 }
 
 const Navbar = ({ onMenuClick }: NavbarProps) => {
@@ -84,12 +84,12 @@ const Navbar = ({ onMenuClick }: NavbarProps) => {
                                                         <Package className="w-4 h-4" />
                                                     </div>
                                             <div>
-                                                <div className="flex items-center gap-2">
-                                                    <h4 className="text-xs font-bold text-gray-900 dark:text-white group-hover:text-purple-400 transition-colors">
+                                                <div className={`flex items-center gap-2 ${theme==='dark'?'text-gray-100':'text-gray-900'}`}>
+                                                    <h4 className="text-xs font-bold group-hover:text-purple-400 transition-colors">
                                                     {product.Name}
                                                     </h4>
-                                                    <span className="text-[10px] px-1.5 py-0.2 rounded font-medium bg-purple-500/20 text-purple-300">
-                                                    {product.cost}
+                                                    <span className="text-[10px] px-1.5 py-0.2 rounded font-medium bg-purple-500/20 text-purple-500">
+                                                    {product.Cost}
                                                     </span>
                                                 </div>
                                             </div>

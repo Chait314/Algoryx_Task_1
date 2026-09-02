@@ -26,13 +26,13 @@ const Customers = () => {
             </div>
             <table className={`w-full text-center text-bg ${theme === 'dark'? 'text-gray-300':'text-gray-800'}`}>
                     <thead className={`text-xs font-bold p-2 uppercase border-b ${(theme==='dark')?'bg-gray-800 text-gray-100 border-gray-800': 'bg-gray-50 text-gray-800 border-gray-200'}`}>
-                        <tr>
+                        <tr className = {`${(theme==='dark')?'bg-gray-800 text-gray-100 border-gray-800': 'bg-gray-200 text-gray-800 border-gray-200'}`}>
                             <th className='px-6 py-3.5'>ID</th>
                             <th className='px-6 py-3.5'>Name</th>
                             <th className='px-6 py-3.5'>Orders Placed</th>
                         </tr>
                     </thead>
-            <tbody className={`border ${theme === 'dark'? 'border-gray-800 bg-black':'border-gray-200 bg-gray-50'}`}>
+            <tbody className={`border-b divide-y ${theme === 'dark'? 'border-gray-800 divide-gray-800 bg-black':'border-gray-200 divide-gray-200 bg-white'}`}>
             {
                 
                 customers.map((cus, idx) => (

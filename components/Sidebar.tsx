@@ -1,14 +1,13 @@
 'use client'
 import { useTheme } from '@/context/ThemeContext';
-import { LayoutDashboard, Settings, ShoppingBag, Users, X } from 'lucide-react';
+import { LayoutDashboard, ShoppingBag, Users, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
 const navItems = [
   { name: 'Dashboard', icon: LayoutDashboard, active: false, href:"/" },
   { name: 'Customers', icon: Users, active: false, href:"/customers"},
-  { name: 'Orders', icon: ShoppingBag, active: false, href:"/orders" },
-  { name: 'Settings', icon: Settings, active: false, href:"/settings"},
+  { name: 'Orders', icon: ShoppingBag, active: false, href:"/orders" }
 ];
 
 const colors = [
