@@ -9,8 +9,8 @@ const navItems = [
   { name: 'Customers', icon: Users, active: false, href:"/customers"},
   { name: 'Orders', icon: ShoppingBag, active: false, href:"/orders" },
   { name: 'Projects', icon: Activity, active: false, href: "/projects"},
-  { name: 'help', icon: HelpingHand, active: false, href: "/help"},
-  { name: 'settings', icon: Settings, active: false, href: "/settings"}
+  { name: 'Help', icon: HelpingHand, active: false, href: "/help"},
+  { name: 'Settings', icon: Settings, active: false, href: "/settings"}
 ];
 
 const colors = [
