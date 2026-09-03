@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import MetricCard from '../components/MetricCard';
 import OrdersTable from '../components/OrdersTable';
 import UserProfile from '../components/UserProfile';
+import BarGraph from './BarGraph';
 import Layout from './Layout';
 
 const gradients = [
@@ -38,18 +39,26 @@ const DashBoard = () => {
                         Overview of your real-time metrics and project deployment status.</p>
             </div>
             <div className = "grid grid-cols-1 md:grid-cols-3 gap-5">
-                <MetricCard title="Total Revenue" value="$1,500" change="+14.2%" isPositive={true} icon={DollarSign} />
+                <MetricCard title="Total Revenue" value="$75" change="+0.2%" isPositive={true} icon={DollarSign} />
                 <MetricCard title="Active Services" value="34" change="+8.1%" isPositive={true} icon={Activity} />
                 <MetricCard title="Active Users" value="8" change="-8.4%" isPositive={false} icon={Users} />
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-                <div className='lg:col-span-2'>
-                    <OrdersTable/>
+            
+            <div className="space-y-6">
+            <div className="w-full">
+                <OrdersTable />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                <BarGraph />
                 </div>
-                <div className='space-y-6'>
-                    <UserProfile/>
+                <div className="lg:col-span-1">
+                <UserProfile />
                 </div>
             </div>
+            </div>
+            
         </div>
     </Layout>
   )

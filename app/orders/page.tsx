@@ -2,6 +2,8 @@
 import { useTheme } from "@/context/ThemeContext";
 
 import Layout from '@/components/Layout';
+import MetricCard from "@/components/MetricCard";
+import { DollarSign, ListOrdered, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Orders = {
@@ -39,6 +41,12 @@ const HandleClick = () => {
     <div className={`border rounded-xl overflow-hidden shadow-xs ${(theme==='dark')? 'bg-black border-gray-800': 'bg-white border-gray-200'}`}>
         <div className="p-5 border-b border-gray-500 flex justify-between items-center">
            <h3 className={`text-lg font-extrabold ${(theme==='dark')? 'text-white': 'text-black'}`}>Recent Orders</h3>
+        </div>
+        <div className = {`grid py-2 px-3 rounded ${theme==='dark'?'bg-black':'bg-white'} grid-cols-2 md:grid-cols-3 gap-5`}>
+            <MetricCard title="Total Customers" value="8" change="-8.4%" isPositive={false} icon={Users} />
+            <MetricCard title="Orders Placed" value="10" change="+2.0%" isPositive={true} icon={ListOrdered} />
+            <MetricCard title="Total Revenue" value="$75" change="+0.2%" isPositive={true} icon={DollarSign} />
+            {/* <MetricCard title="Active Users" value="8" change="-8.4%" isPositive={false} icon={Users} /> */}
         </div>
         <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-gray-600">

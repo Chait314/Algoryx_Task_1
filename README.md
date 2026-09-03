@@ -23,3 +23,9 @@ A modern, responsive, production-quality SaaS Admin Dashboard built with **Next.
 - Handling Layout Challenges with tables, dynamic viewports and flex layouts
 - State Management across modular layout wrappers and UI popovers
 
+To build
+**working directory**:/dashboard
+**command**: docker build -t dashboard .
+
+To Run:
+**command**: docker run -p 3000:3000 dashboard

@@ -1,5 +1,7 @@
 "use client"
+import MetricCard from '@/components/MetricCard';
 import { useTheme } from '@/context/ThemeContext';
+import { Activity, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 
@@ -20,9 +22,14 @@ const Customers = () => {
 
     return (
     <Layout>
-        <div className={`flex-col justify-center`}>
+        <div className={`flex flex-col justify-center`}>
             <div className="p-5 border-b border-gray-500 flex justify-between items-center">
                 <h3 className={`text-lg font-extrabold ${(theme==='dark')? 'text-white': 'text-black'}`}>OUR CUSTOMERS</h3>
+            </div>
+            <div className = {`grid py-2 px-3 rounded ${theme==='dark'?'bg-black':'bg-white'} grid-cols-2 md:grid-cols-3 gap-5`}>
+                <MetricCard title="Total Customers" value="8" change="-8.4%" isPositive={false} icon={Users} />
+                <MetricCard title="Active Services" value="34" change="+8.1%" isPositive={true} icon={Activity} />
+                {/* <MetricCard title="Active Users" value="8" change="-8.4%" isPositive={false} icon={Users} /> */}
             </div>
             <table className={`w-full text-center text-bg ${theme === 'dark'? 'text-gray-300':'text-gray-800'}`}>
                     <thead className={`text-xs font-bold p-2 uppercase border-b ${(theme==='dark')?'bg-gray-800 text-gray-100 border-gray-800': 'bg-gray-50 text-gray-800 border-gray-200'}`}>
