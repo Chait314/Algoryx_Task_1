@@ -4,6 +4,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const chartData = [
+    { year: "2023", revenue:45},
     { year: "2024", revenue:42},
     { year: "2025", revenue:74.80},
     { year: "2026", revenue:75}
@@ -24,7 +25,7 @@ const BarGraph = () => {
             <h3 className={`text-sm font-bold ${theme === "dark" ? "text-white" : "text-black"}`}>
             Revenue Growth (YoY)
             </h3>
-            <span className="text-xs text-purple-500 font-semibold">+0.2% overall</span>
+            <span className="text-xs text-purple-500 font-semibold">+50% since 2023</span>
         </div>
 
         <ChartContainer

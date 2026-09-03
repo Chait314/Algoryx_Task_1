@@ -1,0 +1,7 @@
+[{"name": "Automated Biller", "progress":43, "domain": "Payments"},
+{"name": "Cloud Integration", "progress":78, "domain": "Technology Development"},
+{"name": "Get new products", "progress":90, "domain": "Logistics"},
+{"name" : "Data Analysis", "progress": 56, "domain": "Analytics"},
+{"name": "Software Development", "progress":68, "domain": "Technology Development"},
+{"name": "Powerpoint to Investors", "progress":83, "domain": "Presentation"}
+]

@@ -41,10 +41,10 @@ const Navbar = ({ onMenuClick }: NavbarProps) => {
                 <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"/>
                 <input
                 type="text"
-                placeholder='search...'
+                placeholder='search to filter...'
                 value = {searchText}
                 onFocus={() => setIsFocused(true)}
-                className={`w-full text-sm pl-9 pr-4 py-2 rounded-lg border focus:outline-none focus:ring-2 placeholder-gray-500 focus:ring-purple-800 transition-all ${theme==='dark'?'bg-[#0D1117] text-gray-200':'bg-gray-50 text-gray-900'}`}
+                className={`w-full text-sm pl-9 pr-4 py-2 rounded-lg border focus:outline-none focus:ring-2 placeholder-gray-500 focus:ring-purple-800 transition-all ${theme==='dark'?'bg-[#0D1117] text-gray-200':'bg-white border-black text-gray-900'}`}
                 onChange = {(e)=>handleChange(e)}
                 />
                 {
